@@ -1,126 +1,557 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossario Antico Francese</title>
-    <style>
-        :root {
-            --bg: #f0f2f5;
-            --card: #ffffff;
-            --primary: #2c3e50;
-            --accent: #3498db;
-            --tag-bg: #e1f0fa;
-            --text: #333;
-        }
-
-        body {
-            font-family: -apple-system, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            padding: 15px;
-            line-height: 1.5;
-        }
-
-        .header {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .card {
-            background: var(--card);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-            border-left: 4px solid var(--accent);
-        }
-
-        .top-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-
-        .term {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary);
-            font-style: italic;
-        }
-
-        .category {
-            font-size: 0.7rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            background: var(--tag-bg);
-            color: var(--accent);
-            padding: 4px 8px;
-            border-radius: 6px;
-            white-space: nowrap;
-            margin-left: 10px;
-        }
-
-        .definition {
-            font-size: 1rem;
-            border-top: 1px solid #f0f0f0;
-            padding-top: 8px;
-            color: #555;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glossario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+      body { font-family: 'Source Serif 4', ui-serif, Georgia, 'Times New Roman', serif; margin: 24px; }
+      h1 { margin: 0 0 16px 0; font-weight: 600; }
+      .meta { color: #666; margin-bottom: 16px; font-size: 0.95rem; }
+      .table-wrap { overflow-x: auto; border: 1px solid #e5e7eb; border-radius: 12px; -webkit-overflow-scrolling: touch; }
+      table { border-collapse: collapse; width: 100%; font-size: 16px; table-layout: fixed; }
+      th, td { border: 1px solid #e5e7eb; padding: 10px 12px; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+      th { background: #f8fafc; position: sticky; top: 0; z-index: 1; }
+      caption { text-align: left; font-weight: 600; padding: 0 0 8px 0; }
+      footer { margin-top: 20px; color: #6b7280; font-size: 0.9rem; }
+      :root { --maxw: 1100px; }
+      body { max-width: var(--maxw); margin-left: auto; margin-right: auto; }
+      @media (max-width: 800px) { body { margin: 16px; } }
+      @media (max-width: 600px) {
+        h1 { font-size: clamp(1.25rem, 5vw, 1.6rem); }
+        .meta { font-size: 0.9rem; }
+        table { font-size: 0.95rem; }
+        th, td { padding: 8px; }
+      }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="header">
-        <h1>Glossario</h1>
-    </div>
-
-    <!-- Lista Termini -->
-    <div class="card"><div class="top-row"><span class="term">A / Al / As</span><span class="category">Prep. / Art.</span></div><div class="definition">a / al / ai</div></div>
-    <div class="card"><div class="top-row"><span class="term">Aerdre (s'a.)</span><span class="category">Verbo</span></div><div class="definition">attaccarsi / aggrapparsi</div></div>
-    <div class="card"><div class="top-row"><span class="term">Aperçurent</span><span class="category">Verbo</span></div><div class="definition">scorsero / videro</div></div>
-    <div class="card"><div class="top-row"><span class="term">Asaier</span><span class="category">Verbo</span></div><div class="definition">assalire / mettere alla prova</div></div>
-    <div class="card"><div class="top-row"><span class="term">Atraire</span><span class="category">Verbo</span></div><div class="definition">attrarre / attirare</div></div>
-    <div class="card"><div class="top-row"><span class="term">Aval</span><span class="category">Avverbio</span></div><div class="definition">giù / verso il basso</div></div>
-    <div class="card"><div class="top-row"><span class="term">Avertir</span><span class="category">Verbo</span></div><div class="definition">avvedersi / accorgersi</div></div>
-    <div class="card"><div class="top-row"><span class="term">Avoir</span><span class="category">Verbo</span></div><div class="definition">avere</div></div>
-    <div class="card"><div class="top-row"><span class="term">Bien</span><span class="category">Avverbio</span></div><div class="definition">bene / molto</div></div>
-    <div class="card"><div class="top-row"><span class="term">Chant</span><span class="category">Nome</span></div><div class="definition">canto</div></div>
-    <div class="card"><div class="top-row"><span class="term">Chanter</span><span class="category">Verbo</span></div><div class="definition">cantare</div></div>
-    <div class="card"><div class="top-row"><span class="term">Chief</span><span class="category">Nome</span></div><div class="definition">capo / testa</div></div>
-    <div class="card"><div class="top-row"><span class="term">Cil</span><span class="category">Pronome</span></div><div class="definition">colui / quello</div></div>
-    <div class="card"><div class="top-row"><span class="term">Conurent</span><span class="category">Verbo</span></div><div class="definition">conobbero / riconobbero</div></div>
-    <div class="card"><div class="top-row"><span class="term">Cors</span><span class="category">Nome</span></div><div class="definition">corso / cammino (o corpo)</div></div>
-    <div class="card"><div class="top-row"><span class="term">Creindre</span><span class="category">Verbo</span></div><div class="definition">temere</div></div>
-    <div class="card"><div class="top-row"><span class="term">Cui</span><span class="category">Pronome</span></div><div class="definition">la cui / di cui</div></div>
-    <div class="card"><div class="top-row"><span class="term">De / Del</span><span class="category">Prep. / Art.</span></div><div class="definition">di / del</div></div>
-    <div class="card"><div class="top-row"><span class="term">Deceivre</span><span class="category">Verbo</span></div><div class="definition">ingannare / deludere</div></div>
-    <div class="card"><div class="top-row"><span class="term">Delitable</span><span class="category">Aggettivo</span></div><div class="definition">dilettevole / piacevole</div></div>
-    <div class="card"><div class="top-row"><span class="term">Desturber</span><span class="category">Verbo</span></div><div class="definition">disturbare / ostacolare</div></div>
-    <div class="card"><div class="top-row"><span class="term">Diable</span><span class="category">Nome</span></div><div class="definition">diavolo</div></div>
-    <div class="card"><div class="top-row"><span class="term">Dreit</span><span class="category">Agg. / Nome</span></div><div class="definition">dritto / rotta / giusto</div></div>
-    <div class="card"><div class="top-row"><span class="term">Duce</span><span class="category">Aggettivo</span></div><div class="definition">dolce</div></div>
-    <div class="card"><div class="top-row"><span class="term">Dulçur</span><span class="category">Nome</span></div><div class="definition">dolcezza</div></div>
-    <div class="card"><div class="top-row"><span class="term">Duz / Duces</span><span class="category">Aggettivo</span></div><div class="definition">dolce / dolci</div></div>
-    <div class="card"><div class="top-row"><span class="term">E</span><span class="category">Congiunzione</span></div><div class="definition">e</div></div>
-    <div class="card"><div class="top-row"><span class="term">Eire</span><span class="category">Nome</span></div><div class="definition">cammino / viaggio / rotta</div></div>
-    <div class="card"><div class="top-row"><span class="term">En</span><span class="category">Pronome</span></div><div class="definition">ne (di ciò)</div></div>
-    <div class="card"><div class="top-row"><span class="term">Entent</span><span class="category">Verbo</span></div><div class="definition">presta attenzione / ascolta</div></div>
-    <div class="card"><div class="top-row"><span class="term">Es</span><span class="category">Articolo</span></div><div class="definition">nei (art. contratto)</div></div>
-    <div class="card"><div class="top-row"><span class="term">Eschaper</span><span class="category">Verbo</span></div><div class="definition">scappare / sfuggire</div></div>
-    <div class="card"><div class="top-row"><span class="term">Eschaper</span><span class="category">Verbo</span></div><div class="definition">scampare / sfuggire</div></div>
-    <div class="card"><div class="top-row"><span class="term">Escolter</span><span class="category">Verbo</span></div><div class="definition">ascoltare</div></div>
-    <div class="card"><div class="top-row"><span class="term">Esjoir</span><span class="category">Verbo</span></div><div class="definition">gioire / rallegrarsi</div></div>
-
-</div>
-
+  <h1>Glossario</h1>
+  <div class="meta">Origine: Excel (Foglio1) · Voci: 102</div>
+  <div class="table-wrap"><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>A / Al / As</th>
+      <th>Preposizione / Articolo</th>
+      <th>a / al / ai</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aerdre (s'a.)</td>
+      <td>Verbo</td>
+      <td>attaccarsi / aggrapparsi</td>
+    </tr>
+    <tr>
+      <td>Aperçurent</td>
+      <td>Verbo</td>
+      <td>scorsero / videro</td>
+    </tr>
+    <tr>
+      <td>Asaier</td>
+      <td>Verbo</td>
+      <td>assalire / mettere alla prova</td>
+    </tr>
+    <tr>
+      <td>Atraire</td>
+      <td>Verbo</td>
+      <td>attrarre / attirare</td>
+    </tr>
+    <tr>
+      <td>Aval</td>
+      <td>Avverbio</td>
+      <td>giù / verso il basso</td>
+    </tr>
+    <tr>
+      <td>Avertir</td>
+      <td>Verbo</td>
+      <td>avvedersi / accorgersi</td>
+    </tr>
+    <tr>
+      <td>Avoir</td>
+      <td>Verbo</td>
+      <td>avere</td>
+    </tr>
+    <tr>
+      <td>Bien</td>
+      <td>Avverbio</td>
+      <td>bene / molto</td>
+    </tr>
+    <tr>
+      <td>Chant</td>
+      <td>Nome</td>
+      <td>canto</td>
+    </tr>
+    <tr>
+      <td>Chanter</td>
+      <td>Verbo</td>
+      <td>cantare</td>
+    </tr>
+    <tr>
+      <td>Chief</td>
+      <td>Nome</td>
+      <td>capo / testa</td>
+    </tr>
+    <tr>
+      <td>Cil</td>
+      <td>Pronome</td>
+      <td>colui / quello</td>
+    </tr>
+    <tr>
+      <td>Conurent</td>
+      <td>Verbo</td>
+      <td>conobbero / riconobbero</td>
+    </tr>
+    <tr>
+      <td>Cors</td>
+      <td>Nome</td>
+      <td>corso / cammino (o corpo)</td>
+    </tr>
+    <tr>
+      <td>Creindre</td>
+      <td>Verbo</td>
+      <td>temere</td>
+    </tr>
+    <tr>
+      <td>Cui</td>
+      <td>Pronome</td>
+      <td>la cui / di cui</td>
+    </tr>
+    <tr>
+      <td>De / Del</td>
+      <td>Preposizione / Articolo</td>
+      <td>di / del</td>
+    </tr>
+    <tr>
+      <td>Deceivre</td>
+      <td>Verbo</td>
+      <td>ingannare / deludere</td>
+    </tr>
+    <tr>
+      <td>Delitable</td>
+      <td>Aggettivo</td>
+      <td>dilettevole / piacevole</td>
+    </tr>
+    <tr>
+      <td>Desturber</td>
+      <td>Verbo</td>
+      <td>disturbare / ostacolare</td>
+    </tr>
+    <tr>
+      <td>Diable</td>
+      <td>Nome</td>
+      <td>Diavolo</td>
+    </tr>
+    <tr>
+      <td>Dreit</td>
+      <td>Aggettivo / Nome</td>
+      <td>dritto / rotta / giusto</td>
+    </tr>
+    <tr>
+      <td>Duce</td>
+      <td>Aggettivo</td>
+      <td>dolce</td>
+    </tr>
+    <tr>
+      <td>Dulçur</td>
+      <td>Nome</td>
+      <td>dolcezza</td>
+    </tr>
+    <tr>
+      <td>Duz / Duces</td>
+      <td>Aggettivo</td>
+      <td>dolce / dolci</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>Congiunzione</td>
+      <td>e</td>
+    </tr>
+    <tr>
+      <td>Eire</td>
+      <td>Nome</td>
+      <td>cammino / viaggio / rotta</td>
+    </tr>
+    <tr>
+      <td>En</td>
+      <td>Pronome</td>
+      <td>ne (di ciò)</td>
+    </tr>
+    <tr>
+      <td>Entent</td>
+      <td>Verbo</td>
+      <td>presta attenzione / ascolta</td>
+    </tr>
+    <tr>
+      <td>Es</td>
+      <td>Articolo</td>
+      <td>nei (art. contratto)</td>
+    </tr>
+    <tr>
+      <td>Eschaper</td>
+      <td>Verbo</td>
+      <td>scappare / sfuggire</td>
+    </tr>
+    <tr>
+      <td>Eschaper</td>
+      <td>Verbo</td>
+      <td>scampare / sfuggire</td>
+    </tr>
+    <tr>
+      <td>Escolter</td>
+      <td>Verbo</td>
+      <td>ascoltare</td>
+    </tr>
+    <tr>
+      <td>Esjoïr</td>
+      <td>Verbo</td>
+      <td>gioire / rallegrarsi</td>
+    </tr>
+    <tr>
+      <td>Espaine</td>
+      <td>Nome</td>
+      <td>Spagna</td>
+    </tr>
+    <tr>
+      <td>Estre</td>
+      <td>Verbo</td>
+      <td>essere</td>
+    </tr>
+    <tr>
+      <td>Faire</td>
+      <td>Verbo</td>
+      <td>fare</td>
+    </tr>
+    <tr>
+      <td>Felonie</td>
+      <td>Nome</td>
+      <td>malvagità / fellonia</td>
+    </tr>
+    <tr>
+      <td>Feme</td>
+      <td>Nome</td>
+      <td>donna</td>
+    </tr>
+    <tr>
+      <td>Figure</td>
+      <td>Nome</td>
+      <td>aspetto / figura</td>
+    </tr>
+    <tr>
+      <td>Fol</td>
+      <td>Aggettivo / Nome</td>
+      <td>folle / stolto</td>
+    </tr>
+    <tr>
+      <td>Foleier</td>
+      <td>Verbo</td>
+      <td>vagare follemente</td>
+    </tr>
+    <tr>
+      <td>Grant</td>
+      <td>Aggettivo</td>
+      <td>grande</td>
+    </tr>
+    <tr>
+      <td>Grant</td>
+      <td>Aggettivo</td>
+      <td>grande</td>
+    </tr>
+    <tr>
+      <td>Guarder</td>
+      <td>Verbo</td>
+      <td>guardarsi / proteggersi</td>
+    </tr>
+    <tr>
+      <td>Guerpir</td>
+      <td>Verbo</td>
+      <td>abbandonare / lasciare</td>
+    </tr>
+    <tr>
+      <td>Hanter</td>
+      <td>Verbo</td>
+      <td>frequentare / abitare</td>
+    </tr>
+    <tr>
+      <td>Home</td>
+      <td>Nome</td>
+      <td>uomo</td>
+    </tr>
+    <tr>
+      <td>Huem</td>
+      <td>Nome</td>
+      <td>uomo</td>
+    </tr>
+    <tr>
+      <td>Juste</td>
+      <td>Preposizione</td>
+      <td>vicino a / accanto a</td>
+    </tr>
+    <tr>
+      <td>Kar</td>
+      <td>Congiunzione</td>
+      <td>poiché / perché</td>
+    </tr>
+    <tr>
+      <td>Ke / Ki</td>
+      <td>Pronome</td>
+      <td>che / chi</td>
+    </tr>
+    <tr>
+      <td>Le / Li</td>
+      <td>Articolo</td>
+      <td>il / i / lo</td>
+    </tr>
+    <tr>
+      <td>Lur</td>
+      <td>Possessivo</td>
+      <td>loro</td>
+    </tr>
+    <tr>
+      <td>Mains</td>
+      <td>Avverbio</td>
+      <td>meno (almeno)</td>
+    </tr>
+    <tr>
+      <td>Maint</td>
+      <td>Aggettivo</td>
+      <td>molto / parecchio</td>
+    </tr>
+    <tr>
+      <td>Maintenir</td>
+      <td>Verbo</td>
+      <td>mantenere / frequentare</td>
+    </tr>
+    <tr>
+      <td>Mal</td>
+      <td>Nome</td>
+      <td>male / danno</td>
+    </tr>
+    <tr>
+      <td>Malement</td>
+      <td>Avverbio</td>
+      <td>malamente / male</td>
+    </tr>
+    <tr>
+      <td>Marinier</td>
+      <td>Nome</td>
+      <td>marinaio</td>
+    </tr>
+    <tr>
+      <td>Mer</td>
+      <td>Nome</td>
+      <td>mare</td>
+    </tr>
+    <tr>
+      <td>Mie</td>
+      <td>Particella</td>
+      <td>mica / affatto (negazione)</td>
+    </tr>
+    <tr>
+      <td>Monstre</td>
+      <td>Nome</td>
+      <td>mostro</td>
+    </tr>
+    <tr>
+      <td>Mult</td>
+      <td>Avverbio</td>
+      <td>molto</td>
+    </tr>
+    <tr>
+      <td>Neier</td>
+      <td>Verbo</td>
+      <td>annegare / far affondare</td>
+    </tr>
+    <tr>
+      <td>Nés</td>
+      <td>Nome</td>
+      <td>nave / navi</td>
+    </tr>
+    <tr>
+      <td>Nes</td>
+      <td>Pronome (ne + les)</td>
+      <td>non li</td>
+    </tr>
+    <tr>
+      <td>Nomblil</td>
+      <td>Nome</td>
+      <td>ombelico</td>
+    </tr>
+    <tr>
+      <td>Oblier</td>
+      <td>Verbo</td>
+      <td>dimenticare</td>
+    </tr>
+    <tr>
+      <td>Occident</td>
+      <td>Nome</td>
+      <td>occidente</td>
+    </tr>
+    <tr>
+      <td>Oïr</td>
+      <td>Verbo</td>
+      <td>udire / ascoltare</td>
+    </tr>
+    <tr>
+      <td>Ovre</td>
+      <td>Nome</td>
+      <td>opera / lavoro</td>
+    </tr>
+    <tr>
+      <td>Par</td>
+      <td>Preposizione</td>
+      <td>per / attraverso</td>
+    </tr>
+    <tr>
+      <td>Parler</td>
+      <td>Verbo</td>
+      <td>parlare</td>
+    </tr>
+    <tr>
+      <td>Partir</td>
+      <td>Verbo</td>
+      <td>partire / allontanarsi</td>
+    </tr>
+    <tr>
+      <td>Peine</td>
+      <td>Nome</td>
+      <td>pena / fatica</td>
+    </tr>
+    <tr>
+      <td>Peine</td>
+      <td>Nome</td>
+      <td>pena / fatica</td>
+    </tr>
+    <tr>
+      <td>Peisson</td>
+      <td>Nome</td>
+      <td>pesce</td>
+    </tr>
+    <tr>
+      <td>Perdre</td>
+      <td>Verbo</td>
+      <td>perdere</td>
+    </tr>
+    <tr>
+      <td>Periller</td>
+      <td>Verbo</td>
+      <td>perire / naufragare</td>
+    </tr>
+    <tr>
+      <td>Pleines</td>
+      <td>Aggettivo</td>
+      <td>piene</td>
+    </tr>
+    <tr>
+      <td>Poëir</td>
+      <td>Verbo</td>
+      <td>potere</td>
+    </tr>
+    <tr>
+      <td>Pruef</td>
+      <td>Avverbio</td>
+      <td>vicino / quasi</td>
+    </tr>
+    <tr>
+      <td>Poëir</td>
+      <td>Verbo</td>
+      <td>potere</td>
+    </tr>
+    <tr>
+      <td>Se</td>
+      <td>Congiunzione</td>
+      <td>se</td>
+    </tr>
+    <tr>
+      <td>Saveir</td>
+      <td>Verbo</td>
+      <td>savere</td>
+    </tr>
+    <tr>
+      <td>Sembler</td>
+      <td>Verbo</td>
+      <td>sembrare</td>
+    </tr>
+    <tr>
+      <td>Sereinne</td>
+      <td>Nome</td>
+      <td>sirena</td>
+    </tr>
+    <tr>
+      <td>Si</td>
+      <td>Congiunzione</td>
+      <td>così / e</td>
+    </tr>
+    <tr>
+      <td>Sovent</td>
+      <td>Avverbio</td>
+      <td>sovente / spesso</td>
+    </tr>
+    <tr>
+      <td>Sun</td>
+      <td>Possessivo</td>
+      <td>suo</td>
+    </tr>
+    <tr>
+      <td>Tant</td>
+      <td>Avverbio</td>
+      <td>tanto</td>
+    </tr>
+    <tr>
+      <td>Tens</td>
+      <td>Nome</td>
+      <td>tempo</td>
+    </tr>
+    <tr>
+      <td>Trespasser</td>
+      <td>Verbo</td>
+      <td>attraversare / passare</td>
+    </tr>
+    <tr>
+      <td>Troïen</td>
+      <td>Nome</td>
+      <td>Troiano</td>
+    </tr>
+    <tr>
+      <td>Trover</td>
+      <td>Verbo</td>
+      <td>trovare</td>
+    </tr>
+    <tr>
+      <td>U</td>
+      <td>Congiunzione</td>
+      <td>o / oppure</td>
+    </tr>
+    <tr>
+      <td>Aler</td>
+      <td>Verbo</td>
+      <td>andare</td>
+    </tr>
+    <tr>
+      <td>Veie</td>
+      <td>Nome</td>
+      <td>via / strada</td>
+    </tr>
+    <tr>
+      <td>Vers</td>
+      <td>Preposizione</td>
+      <td>verso</td>
+    </tr>
+    <tr>
+      <td>Voiz</td>
+      <td>Nome</td>
+      <td>voce</td>
+    </tr>
+    <tr>
+      <td>Voleir</td>
+      <td>Verbo</td>
+      <td>volere</td>
+    </tr>
+  </tbody>
+</table></div>
+  <footer>Generato automaticamente da Excel → HTML</footer>
 </body>
 </html>
