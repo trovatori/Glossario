@@ -3,159 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossario - Wace, Roman de Brut</title>
-    <!-- Importazione Google Fonts: Source Serif 4 -->
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <title>Glossario Antico Francese</title>
     <style>
         :root {
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --accent-color: #5d4037; /* Marrone scuro per un tocco classico */
-            --category-bg: #efebe9;
-            --text-primary: #212121;
-            --text-secondary: #757575;
+            --bg: #f0f2f5;
+            --card: #ffffff;
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --tag-bg: #e1f0fa;
+            --text: #333;
         }
 
         body {
-            font-family: 'Source Serif 4', serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
+            font-family: -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             margin: 0;
-            padding: 16px;
+            padding: 15px;
             line-height: 1.5;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 24px;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
+            padding: 20px 0;
         }
 
-        .header h1 {
-            font-size: 1.4rem;
-            margin: 0;
-            font-weight: 700;
-        }
-
-        .header p {
-            font-size: 0.9rem;
-            font-style: italic;
-            margin: 5px 0 0;
-            color: var(--text-secondary);
-        }
-
-        .glossary-container {
+        .container {
             max-width: 600px;
             margin: 0 auto;
         }
 
-        /* Layout a Schede */
         .card {
-            background: var(--card-bg);
-            border-radius: 8px;
+            background: var(--card);
+            border-radius: 12px;
             padding: 16px;
             margin-bottom: 12px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--accent);
         }
 
-        .card-header {
+        .top-row {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .term {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
-            color: var(--accent-color);
+            color: var(--primary);
             font-style: italic;
         }
 
         .category {
-            font-size: 0.75rem;
-            font-weight: 400;
-            background: var(--category-bg);
-            padding: 2px 8px;
-            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-color);
+            background: var(--tag-bg);
+            color: var(--accent);
+            padding: 4px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
+            margin-left: 10px;
         }
 
         .definition {
-            font-size: 1.05rem;
-            color: var(--text-primary);
+            font-size: 1rem;
+            border-top: 1px solid #f0f0f0;
             padding-top: 8px;
-            border-top: 1px solid #f5f5f5;
-        }
-
-        /* Ottimizzazione per il tocco */
-        .card:active {
-            background-color: #fcfcfc;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
-<div class="glossary-container">
+<div class="container">
     <div class="header">
         <h1>Glossario</h1>
-        <p>Wace, Roman de Brut, vv. 733-773</p>
     </div>
 
-    <!-- Esempi di voci compilate dall'immagine -->
-    <div class="card">
-        <div class="card-header">
-            <span class="term">A / Al / As</span>
-            <span class="category">Preposizione / Articolo</span>
-        </div>
-        <div class="definition">a / al / ai</div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <span class="term">Aerdre (s'a.)</span>
-            <span class="category">Verbo</span>
-        </div>
-        <div class="definition">attaccarsi / aggrapparsi</div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <span class="term">Aperçurent</span>
-            <span class="category">Verbo</span>
-        </div>
-        <div class="definition">scorsero / videro</div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <span class="term">Asaier</span>
-            <span class="category">Verbo</span>
-        </div>
-        <div class="definition">assalire / mettere alla prova</div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <span class="term">Atraire</span>
-            <span class="category">Verbo</span>
-        </div>
-        <div class="definition">attrarre / attirare</div>
-    </div>
-
-    <div class="card">
-        <div class="card-header">
-            <span class="term">Aval</span>
-            <span class="category">Avverbio</span>
-        </div>
-        <div class="definition">giù / verso il basso</div>
-    </div>
-
-    <!-- Aggiungi qui le altre voci seguendo lo stesso schema -->
+    <!-- Lista Termini -->
+    <div class="card"><div class="top-row"><span class="term">A / Al / As</span><span class="category">Prep. / Art.</span></div><div class="definition">a / al / ai</div></div>
+    <div class="card"><div class="top-row"><span class="term">Aerdre (s'a.)</span><span class="category">Verbo</span></div><div class="definition">attaccarsi / aggrapparsi</div></div>
+    <div class="card"><div class="top-row"><span class="term">Aperçurent</span><span class="category">Verbo</span></div><div class="definition">scorsero / videro</div></div>
+    <div class="card"><div class="top-row"><span class="term">Asaier</span><span class="category">Verbo</span></div><div class="definition">assalire / mettere alla prova</div></div>
+    <div class="card"><div class="top-row"><span class="term">Atraire</span><span class="category">Verbo</span></div><div class="definition">attrarre / attirare</div></div>
+    <div class="card"><div class="top-row"><span class="term">Aval</span><span class="category">Avverbio</span></div><div class="definition">giù / verso il basso</div></div>
+    <div class="card"><div class="top-row"><span class="term">Avertir</span><span class="category">Verbo</span></div><div class="definition">avvedersi / accorgersi</div></div>
+    <div class="card"><div class="top-row"><span class="term">Avoir</span><span class="category">Verbo</span></div><div class="definition">avere</div></div>
+    <div class="card"><div class="top-row"><span class="term">Bien</span><span class="category">Avverbio</span></div><div class="definition">bene / molto</div></div>
+    <div class="card"><div class="top-row"><span class="term">Chant</span><span class="category">Nome</span></div><div class="definition">canto</div></div>
+    <div class="card"><div class="top-row"><span class="term">Chanter</span><span class="category">Verbo</span></div><div class="definition">cantare</div></div>
+    <div class="card"><div class="top-row"><span class="term">Chief</span><span class="category">Nome</span></div><div class="definition">capo / testa</div></div>
+    <div class="card"><div class="top-row"><span class="term">Cil</span><span class="category">Pronome</span></div><div class="definition">colui / quello</div></div>
+    <div class="card"><div class="top-row"><span class="term">Conurent</span><span class="category">Verbo</span></div><div class="definition">conobbero / riconobbero</div></div>
+    <div class="card"><div class="top-row"><span class="term">Cors</span><span class="category">Nome</span></div><div class="definition">corso / cammino (o corpo)</div></div>
+    <div class="card"><div class="top-row"><span class="term">Creindre</span><span class="category">Verbo</span></div><div class="definition">temere</div></div>
+    <div class="card"><div class="top-row"><span class="term">Cui</span><span class="category">Pronome</span></div><div class="definition">la cui / di cui</div></div>
+    <div class="card"><div class="top-row"><span class="term">De / Del</span><span class="category">Prep. / Art.</span></div><div class="definition">di / del</div></div>
+    <div class="card"><div class="top-row"><span class="term">Deceivre</span><span class="category">Verbo</span></div><div class="definition">ingannare / deludere</div></div>
+    <div class="card"><div class="top-row"><span class="term">Delitable</span><span class="category">Aggettivo</span></div><div class="definition">dilettevole / piacevole</div></div>
+    <div class="card"><div class="top-row"><span class="term">Desturber</span><span class="category">Verbo</span></div><div class="definition">disturbare / ostacolare</div></div>
+    <div class="card"><div class="top-row"><span class="term">Diable</span><span class="category">Nome</span></div><div class="definition">diavolo</div></div>
+    <div class="card"><div class="top-row"><span class="term">Dreit</span><span class="category">Agg. / Nome</span></div><div class="definition">dritto / rotta / giusto</div></div>
+    <div class="card"><div class="top-row"><span class="term">Duce</span><span class="category">Aggettivo</span></div><div class="definition">dolce</div></div>
+    <div class="card"><div class="top-row"><span class="term">Dulçur</span><span class="category">Nome</span></div><div class="definition">dolcezza</div></div>
+    <div class="card"><div class="top-row"><span class="term">Duz / Duces</span><span class="category">Aggettivo</span></div><div class="definition">dolce / dolci</div></div>
+    <div class="card"><div class="top-row"><span class="term">E</span><span class="category">Congiunzione</span></div><div class="definition">e</div></div>
+    <div class="card"><div class="top-row"><span class="term">Eire</span><span class="category">Nome</span></div><div class="definition">cammino / viaggio / rotta</div></div>
+    <div class="card"><div class="top-row"><span class="term">En</span><span class="category">Pronome</span></div><div class="definition">ne (di ciò)</div></div>
+    <div class="card"><div class="top-row"><span class="term">Entent</span><span class="category">Verbo</span></div><div class="definition">presta attenzione / ascolta</div></div>
+    <div class="card"><div class="top-row"><span class="term">Es</span><span class="category">Articolo</span></div><div class="definition">nei (art. contratto)</div></div>
+    <div class="card"><div class="top-row"><span class="term">Eschaper</span><span class="category">Verbo</span></div><div class="definition">scappare / sfuggire</div></div>
+    <div class="card"><div class="top-row"><span class="term">Eschaper</span><span class="category">Verbo</span></div><div class="definition">scampare / sfuggire</div></div>
+    <div class="card"><div class="top-row"><span class="term">Escolter</span><span class="category">Verbo</span></div><div class="definition">ascoltare</div></div>
+    <div class="card"><div class="top-row"><span class="term">Esjoir</span><span class="category">Verbo</span></div><div class="definition">gioire / rallegrarsi</div></div>
 
 </div>
 
